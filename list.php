@@ -8,7 +8,7 @@
     <title>выберите тест</title>
 </head>
 <body>
-    <a href="index.php" class="back"><div>< Назад</div></a>
+    <a href="admin.php" class="back"><div>< Назад</div></a>
     <hr>
 
     <?php if (!empty($allFiles)): ?>
