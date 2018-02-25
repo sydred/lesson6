@@ -19,7 +19,7 @@ if (isset($_POST['check-test'])) {
         $questions = 0;
         foreach ($testFile as $key => $item) {
             $questions++;
-            if ($item['correct_answer'] === $_POST['answer' . $key]) {
+            if ($item['correct'] === $_POST['answer' . $key]) {
                 $i++;
                 $infoStyle = 'correct';
             } else {
@@ -28,7 +28,7 @@ if (isset($_POST['check-test'])) {
             echo "<div class=\"$infoStyle\">";
             echo 'Вопрос: ' . $item['question'] . '<br>';
             echo 'Ваш ответ: ' . $item['answers'][$_POST['answer' . $key]] . '<br>';
-            echo 'Правильный ответ: ' . $item['answers'][$item['correct_answer']] . '<br>';
+            echo 'Правильный ответ: ' . $item['answers'][$item['correct']] . '<br>';
             echo '</div>';
             echo '<hr>';
         }

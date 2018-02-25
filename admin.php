@@ -1,8 +1,4 @@
 <?php
-echo "<pre>";
-var_dump($_FILES);
-var_dump($_POST);
-echo "</pre>";
 if(isset($_FILES['myfile']['name']) && !empty($_FILES['myfile']['name']))
 {
 	if($_FILES['myfile']['error'] == UPLOAD_ERR_OK &&
